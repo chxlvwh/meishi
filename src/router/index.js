@@ -7,14 +7,9 @@ Vue.use(Router)
 export default new Router({
 	routes: [
 		{
-			path: '/',
-			name: 'HelloWorld',
-			component: (r) => {
-				require.ensure([], () => r(require('@/components/HelloWorld')), 'chunkname')
-			}
-		}, {
 			path: '/home',
 			name: 'Home',
+			alias: '/',
 			component: (r) => {
 				require.ensure([], () => r(require('@/views/home')), 'chunkname1')
 			}
